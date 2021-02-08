@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼태그 : 서버로 데이터 전송할때 사용</title>
+<script type="text/javascript">
+	// obj1의 길이가 length라면 obj2로 가라!!!
+	function nextObj(obj1, length, obj2){
+		var value = obj1.value;
+		if(value.length==length){
+			document.getElementById(obj2).focus();
+			return;
+		}
+	}
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>폼태그 연습</legend>
+		<form action="result.jsp" method="post">
+			이름  : <input type="text" name="name" id="name"  /> <br />
+			사용자 아이디  : <input type="text" name="userid" id="userid"  /> <br />
+			사용자 비밀번호  : <input type="password" name="password" id="password"  /> <br />
+			주민번호 : 
+			<input type="text" size="10" maxlength="6" name="j1" id="j1" onkeyup="nextObj(this, 6, 'j2' )">
+			-
+			<input type="password" size="10" maxlength="7" name="j2" id="j2"  onkeyup="nextObj(this, 7, 'm' )"> <br />
+			성별 : 
+			<!-- 여러개 중에 1개만 선택되려면 name속성이 반드시 같아야 한다. -->
+			<input type="radio" name="gender" value="남" id="m"/> <label for="m">남자</label>
+			<!-- checked="checked" : 기본 선택 -->
+			<label><input type="radio" name="gender" value="여" checked="checked" id="f"/> 여자 </label>
+			<br />
+			취미 : 
+			<input type="checkbox" name="hobby" value="1" id="h1" checked="checked"><label for="h1">낚시</label>
+			<input type="checkbox" name="hobby" value="2" id="h2"><label for="h2">등산</label>
+			<input type="checkbox" name="hobby" value="3" id="h3"><label for="h3">독서</label>
+			<input type="checkbox" name="hobby" value="4" id="h4"><label for="h4">음주</label>
+			<input type="checkbox" name="hobby" value="5" id="h5"><label for="h5">가무</label>
+			<br />
+			<input type="submit" value="전송하기">
+			<input type="reset" value="다시쓰기">
+		</form>
+	</fieldset>
+</body>
+</html>

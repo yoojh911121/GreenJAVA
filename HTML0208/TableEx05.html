@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표만들기</title>
+</head>
+<body>
+	<!-- table[border='1']>(tr>td*3)*4  -->
+	<table border="1" style="width: 500px;">
+		<caption align="top"> 태블릿 PC와 스마트폰 판매 현황</caption> <!-- 표제목 -->
+		<!-- 폭의 구분은 글자수에 맞춰서 자동으로 지정된다. -->
+		<colgroup>
+			<col width="30%">
+			<col width="35%">
+			<col width="35%">
+		</colgroup>
+		<tr>
+			<th>구분</th>
+			<th>태블릿 PC</th>
+			<th>스마트 폰</th>
+		</tr>
+		<tr align="right">
+			<th>상반기 판매수</th>
+			<td>2만대</td>
+			<td>6만대</td>
+		</tr>
+		<tr align="right">
+			<th>하반기 판매수</th>
+			<td>3만대</td>
+			<td>8만대</td>
+		</tr>
+		<tr align="right">
+			<th>총 판매수</th>
+			<td>5만대</td>
+			<td>14만대</td>
+		</tr>
+	</table>
+</body>
+</html>

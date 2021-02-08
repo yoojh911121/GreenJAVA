@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표만들기 2</title>
+</head>
+<body>
+	<!-- table[border="1"]>thead>tr>th{제목 $}*4  -->
+	<!-- HTML5부터는 폭과 높이를 스타일시트로 지정해라!!! -->
+	<table border="1" width="300px" height="400px">
+		<thead> <!-- 표 헤더 -->
+			<tr>
+				<th>제목 1</th> <!-- 진하게 가운데 정렬 -->
+				<th>제목 2</th>
+				<th>제목 3</th>
+				<th>제목 4</th>
+			</tr>
+		</thead>
+		<tbody>  <!-- 표 몸체 -->
+			<tr>
+				<td>내용 1</td>
+				<td>내용 2</td>
+				<td>내용 3</td>
+				<td>내용 4</td>
+			</tr>
+		</tbody>
+		<tfoot>  <!-- 표 꼬리 -->
+			<tr>
+				<th>제목 1</th> <!-- 진하게 가운데 정렬 -->
+				<th>제목 2</th>
+				<th>제목 3</th>
+				<th>제목 4</th>
+			</tr>
+		</tfoot>
+	</table>
+	<br />
+	<!-- HTML5부터는 폭과 높이를 스타일시트로 지정해라!!! -->
+	<!-- margin: auto; : 표 전체 가운데 정렬 -->
+	<table border="1" style="width: 500px;height: 400px;margin: auto;">
+		<thead> <!-- 표 헤더 -->
+			<tr align="left"> <!-- th에서는 정렬을 tr에 주면 변함 없음 -->
+				<th>제목 1</th> <!-- 진하게 가운데 정렬 -->
+				<th align="left">제목 2</th>
+				<th align="center">제목 3</th>
+				<th align="right">제목 4</th>
+			</tr>
+		</thead>
+		<tbody>  <!-- 표 몸체 -->
+			<tr>
+				<td>내용 1</td>
+				<td valign="top">내용 2</td>
+				<td valign="middle">내용 3</td>
+				<td valign="bottom">내용 4</td>
+			</tr>
+		</tbody>
+		<tfoot>  <!-- 표 꼬리 -->
+			<tr>
+				<th align="left" valign="top">제목 1</th> <!-- 진하게 가운데 정렬 -->
+				<th align="left"  valign="bottom">제목 2</th>
+				<th align="right" valign="top">제목 3</th>
+				<th align="right" valign="bottom">제목 4</th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
